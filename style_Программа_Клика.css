@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #222;
+    overflow: hidden;
+    transition: background 0.5s;
+}
+
+/* LEVEL */
+#level {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ACHIEVEMENTS */
+#achievements {
+    position: fixed;
+    left: 20px;
+    top: 80px;
+    width: 280px;
+    background: rgba(255,255,255,0.85);
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+#achievements h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.ach {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.ach.glow {
+    background: #fff8dc;
+}
+
+.g1 { box-shadow: 0 0 10px gold; }
+.g2 { box-shadow: 0 0 16px gold; }
+.g3 { box-shadow: 0 0 22px gold; }
+.g4 { box-shadow: 0 0 28px gold; }
+.g5 { box-shadow: 0 0 34px gold; }
+.g6 { box-shadow: 0 0 45px gold; }
+
+/* PROGRESS BAR */
+.progress-container {
+    margin-top: 20px;
+    height: 14px;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, gold, orange);
+    border-radius: 8px;
+    transition: width 0.3s;
+}
+
+/* CENTER */
+.center {
+    text-align: center;
+    margin-top: 200px;
+}
+
+#counter {
+    font-size: 56px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+button#btn {
+    font-size: 26px;
+    padding: 16px 46px;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffcf33, #ff9f00);
+    color: #222;
+    box-shadow: 0 8px 20px rgba(255,165,0,0.5);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button#btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(255,165,0,0.4);
+}
+
+/* SETTINGS */
+#settings {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* WIN SCREEN */
+#win {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #fff7c2, #ffd700);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#win h1 {
+    font-size: 64px;
+    color: #222;
+    text-shadow: 0 0 30px gold;
+}
+
+#win h2, #win h3 {
+    color: #333;
+}
+
+/* +NUMBER EFFECT */
+.plus {
+    position: absolute;
+    color: orange;
+    font-size: 22px;
+    font-weight: bold;
+    pointer-events: none;
+    animation: fly 1s forwards;
+}
+
+@keyframes fly {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-40px); }
+}
+
+/* ================== MOBILE VERSION ================== */
+@media (max-width: 768px) {
+
+    body { font-size: 16px; }
+
+    #level {
+        font-size: 18px;
+        padding: 4px 10px;
+        top: 10px;
+        right: 10px;
+    }
+
+    #achievements {
+        left: 10px;
+        top: 70px;
+        width: 220px;
+        padding: 12px;
+    }
+
+    .ach { padding: 8px; font-size: 14px; }
+
+    #counter { font-size: 40px; }
+
+    button#btn { font-size: 22px; padding: 14px 30px; }
+
+    #settings { bottom: 15px; right: 10px; padding: 6px 10px; font-size: 14px; }
+
+    #win h1 { font-size: 48px; }
+    #win h2, #win h3 { font-size: 22px; }
+
+    #progress { height: 10px; }
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultimate Clicker MVP</title>
+    <link rel="stylesheet" href="./style_Программа_Клика.css">
+</head>
+<body>
+
+<!-- LEVEL -->
+<div id="level">LVL 1</div>
+
+<!-- ACHIEVEMENTS -->
+<div id="achievements">
+    <h3>Ачивки</h3>
+    <div class="ach" data-value="500">500 — Новичок</div>
+    <div class="ach glow g1" data-value="3000">3000 — Про</div>
+    <div class="ach glow g2" data-value="10000">10000 — Мастер</div>
+    <div class="ach glow g3" data-value="20000">20000 — Легенда</div>
+    <div class="ach glow g4" data-value="30000">30000 — Супер-легенда</div>
+    <div class="ach glow g5" data-value="50000">50000 — Чемпион</div>
+    <div class="ach glow g6" data-value="100000">100000 — Невозможность</div>
+
+    <div class="progress-container">
+        <div id="progress"></div>
+    </div>
+</div>
+
+<!-- CENTER -->
+<div class="center">
+    <div id="counter">0</div>
+    <button id="btn">КЛИК</button>
+</div>
+
+<!-- SETTINGS -->
+<div id="settings">
+    <label>
+        <input type="checkbox" id="soundToggle">
+        Звук / Вибрация
+    </label>
+</div>
+
+<!-- WIN SCREEN -->
+<div id="win">
+    <h1>ПОЗДРАВЛЯЮ ✨</h1>
+    <h2>Ты прошёл игру</h2>
+    <h3 id="mvpText">LVL 2 MVP</h3>
+    <button id="continue">Продолжить</button>
+</div>
+
+<audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b2b3a.mp3"></audio>
+
+<script src="./Main_Програма_Клика.js"></script>
+</body>
+</html>
